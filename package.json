@@ -1,0 +1,22 @@
+{
+  "name": "bus_simulator",
+  "version": "1.0.0",
+  "description": "Initial Commit",
+  "main": "bus_simulator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulpapalek/Bus-Simulator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdulpapalek/Bus-Simulator/issues"
+  },
+  "homepage": "https://github.com/abdulpapalek/Bus-Simulator#readme",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
+}
