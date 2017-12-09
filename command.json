@@ -1,8 +1,18 @@
 {
-  "command": ["PLACE 0, 0, NORTH",
+  "command": ["PLACE 1,2,EAST",
               "MOVE",
               "LEFT",
               "LEFT",
+              "REPORT",
+              "PLACE 1,2,NORTH",
+              "MOVE",
+              "RIGHT",
+              "LEFT",
+              "REPORT",
+              "PLACE 1,2,SOUTH",
+              "MOVE",
+              "LEFT",
+              "RIGHT",
               "REPORT"
               ]
 }
