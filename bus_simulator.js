@@ -1,6 +1,6 @@
 const commands = require('./command.json');
 let constant = require('./constants.js');
-const PLACEBUSPATTERN = /(PLACE) [0-5],[0-5],[A-Z]+/g;
+const PLACEBUSPATTERN = /(PLACE) [0-5],[0-5],[A-Z]+/;
 const SPECIALCHARACTERPATTERN = /[!@#$%^&*()_+\-=\[\]{};':\\|.<>\/?]+/;
 const RETRIEVECOORDINATES = /[0-9]+/g;
 const CHECKNUMERICSPECIALCHAR = /^[a-z0-9_@./#&+-,]*$/;
@@ -63,7 +63,6 @@ function placeBus(command){
 	var coordinates = retrievexy(command);
 	state.xposition = coordinates[0];
 	state.yposition = coordinates[1];
-	
 	return constant.SUCCESS;
 }
 function moveBus(){
