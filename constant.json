@@ -1,10 +1,4 @@
 {
-  "prefix": ["PLACE",
-              "MOVE",
-              "LEFT",
-              "RIGHT",
-              "REPORT"
-            ],
   "cardinal_directions":["NORTH",
 			             "SOUTH",
 			             "EAST",

@@ -1,42 +1,82 @@
-var commands = require('./command.json');
-var constant = require('./constant.json');
-state = {
-	xposition:null,
-	yposition:null,
-	direction:null
-}
-
-function bus_simulation(){
+const commands = require('./command.json');
+//const constant = require('./constant.json');
+var state = {
+		xposition:null,
+		yposition:null,
+		cadinaldirection:null
+	  }
+let constant = require('./constants.js');
+function busSimulation(){
 	//console.log(commands.command);
 	var initialPositionFlag = false;
-	var prefix = constant.prefix;
-	var cardinalDirection = constant.cardinal_direction;
-	var commandList = commands.command;
-	commandlist.forEach(function(command){
-
-		if(initialPositionFlag == false){
-			var pos = command.search("PLACE");
-			if(pos != 1){
-				continue;
+	const commandList = commands.command;
+	var pos = 0;
+	commandList.forEach(function(command){
+		//check for the PLACE prefix
+		pos = command.search(constant.PLACE);
+		if(pos == 0){
+			let valid = placeBus(command);
+			if(valid == constant.FAIL){
+				return;
 			}
-			initialPositionFlag == true
+			initialPositionFlag = true;
+			return;		
 		}
-		else{
-
+		
+		if(initialPositionFlag == false){			
+			return;
+		}
+		//check for numeric, special characters and lower case characters
+		pos = command.search("/^[a-z0-9_@./#&+-,]*$/");
+		if(pos > -1){
+			return;
+		}
+		switch(command) {
+		    case constant.MOVE:
+		        moveBus();
+		        break;
+		    case constant.LEFT:
+		        shiftPosition(constants.LEFT);
+		        break;
+		    case constant.RIGHT:
+		        shiftPosition(constants.RIGHT);
+		        break;
+		    case constant.REPORT:
+		        reportBusPostion();
+		        break;
+		    default:
+		        break;
 		}
 	});
 }
-function place_bus(){
+function placeBus(command){
+	if(checkPlaceValidity(command) == false){
+		return constant.FAIL;
+	}
+	var coordinates = retrievexy(command); 
+}
+function moveBus(){
 
 }
-function move_bus(){
+
+function reportBusPostion(){
 
 }
-function report_bus_postion(){
+
+function shiftPosition(){
 
 }
-function extract_prefix(){
 
+function retrievexy(command){
+	return command.match(/[0-9]+/g);
 }
-bus_simulation();
+
+function checkPlaceValidity(command){
+	var input = specialCharacterPattern.test(command);
+	if(input == false){
+		return placeBusPattern.test(command);
+	}
+	return false;
+}
+busSimulation();
 
