@@ -81,13 +81,14 @@ module.exports = {
 								var index = constant.CARDINALDIRECTIONS.indexOf(state.cardinaldirection);
 								switch(position){
 								    case constant.RIGHT:
-								    	state.cardinaldirection = constant.CARDINALDIRECTIONS[(index + 1) % 
+								    	state.cardinaldirection = constant.CARDINALDIRECTIONS[(index + 
+								    							  constant.CARDINALDIRECTIONS.length - 1)% 
 								    							  constant.CARDINALDIRECTIONS.length];
 								        break;
 								    case constant.LEFT:
-								    	state.cardinaldirection = constant.CARDINALDIRECTIONS[(index + 
-								    							  constant.CARDINALDIRECTIONS.length - 1)% 
-								    							  constant.CARDINALDIRECTIONS.length];										    		  
+								    	state.cardinaldirection = constant.CARDINALDIRECTIONS[(index + 1) % 
+								    							  constant.CARDINALDIRECTIONS.length];
+										    		  
 								        break;
 								    default:
 								        break;

@@ -13,6 +13,21 @@
               "MOVE",
               "LEFT",
               "RIGHT",
+              "MOVE",
+              "MOVE",
+              "MOVE",
+              "MOVE",
+              "MOVE",
+              "REPORT",
+              "RIGHT",
+              "REPORT",
+              "LEFT",
+              "REPORT",
+              "RIGHT",
+              "RIGHT",
+              "REPORT",
+              "RIGHT",
+              "RIGHT",
               "REPORT"
               ]
 }
