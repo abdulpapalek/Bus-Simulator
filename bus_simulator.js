@@ -23,6 +23,7 @@ function busSimulation(){
 				return;
 			}
 			initialPositionFlag = true;
+			//console.log(state.cardinaldirection);
 			return;		
 		}
 
@@ -34,6 +35,7 @@ function busSimulation(){
 		if(pos > constant.NOTFOUND){
 			return;
 		}
+		//console.log(state.cardinaldirection);
 		switch(command) {
 		    case constant.MOVE:
 		        moveBus();
@@ -63,6 +65,7 @@ function placeBus(command){
 	var coordinates = retrievexy(command);
 	state.xposition = coordinates[0];
 	state.yposition = coordinates[1];
+	//console.log(state.cardinaldirection);
 	return constant.SUCCESS;
 }
 function moveBus(){
@@ -102,14 +105,17 @@ function reportBusPostion(){
 
 function shiftPosition(position){
 	var index = constant.CARDINALDIRECTIONS.indexOf(state.cardinaldirection);
+	//console.log("cardinal before shift:"+state.cardinaldirection);
 	switch(position){
 	    case constant.RIGHT:
 	    	state.cardinaldirection = constant.CARDINALDIRECTIONS[(index + 1) % 
 	    											    constant.CARDINALDIRECTIONS.length];
+	    	//console.log("RIGHT:"+state.cardinaldirection);
 	        break;
 	    case constant.LEFT:
 	    	state.cardinaldirection = constant.CARDINALDIRECTIONS[(index + constant.CARDINALDIRECTIONS.length - 1)% 
 	    											    		  constant.CARDINALDIRECTIONS.length];
+	    	//console.log("LEFT:"+state.cardinaldirection);										    		  
 	        break;
 	    default:
 	        break;
@@ -133,7 +139,7 @@ function findCardinalDirection(command){
 	constant.CARDINALDIRECTIONS.some(function(direction) {
 		pos = command.search(direction);
 		if(pos != constant.NOTFOUND){
-			state.cadinaldirection = direction;
+			state.cardinaldirection = direction;
 			return true;
 		}
 	});
