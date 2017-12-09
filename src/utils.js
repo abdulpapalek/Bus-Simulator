@@ -77,7 +77,7 @@ module.exports = {
 							    console.log(state.xposition+","+state.yposition+","+state.cardinaldirection);
 						  },
 
-	shiftPosition		: function (position){
+	rotatePosition		: function (position){
 								var index = constant.CARDINALDIRECTIONS.indexOf(state.cardinaldirection);
 								switch(position){
 								    case constant.RIGHT:

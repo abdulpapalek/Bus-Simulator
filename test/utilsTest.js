@@ -104,14 +104,14 @@ describe('reportBusPostion',function(){
 	});
 });
 //SHIFT to the right
-describe('shiftPosition',function(){
+describe('rotatePosition',function(){
 	it('undefined',function(){
-		assert.equal(UtilityMethods.shiftPosition(constant.RIGHT), undefined);
+		assert.equal(UtilityMethods.rotatePosition(constant.RIGHT), undefined);
 	});
 });
 //SHIFT to the left
-describe('shiftPosition',function(){
+describe('rotatePosition',function(){
 	it('undefined',function(){
-		assert.equal(UtilityMethods.shiftPosition(constant.LEFT), undefined);
+		assert.equal(UtilityMethods.rotatePosition(constant.LEFT), undefined);
 	});
-});
+});	

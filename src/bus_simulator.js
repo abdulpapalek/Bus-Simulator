@@ -31,10 +31,10 @@ module.exports =  function(){
 		        UtilityMethods.moveBus();
 		        break;
 		    case constant.LEFT:
-		        UtilityMethods.shiftPosition(constant.LEFT);
+		        UtilityMethods.rotatePosition(constant.LEFT);
 		        break;
 		    case constant.RIGHT:
-		        UtilityMethods.shiftPosition(constant.RIGHT);
+		        UtilityMethods.rotatePosition(constant.RIGHT);
 		        break;
 		    case constant.REPORT:
 		        UtilityMethods.reportBusPostion();
