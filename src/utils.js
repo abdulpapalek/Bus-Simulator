@@ -45,27 +45,27 @@ module.exports = {
 	moveBus				: function (){
 								switch(state.cardinaldirection){
 								    case constant.NORTH:
-								        state.xposition++;
-								        if(state.xposition > constant.MAX){
-								        	state.xposition--;
-								        }
-								        break;
-								    case constant.SOUTH:
-								        state.xposition--;
-								        if(state.xposition < constant.MIN){
-								        	state.xposition++;
-								        }
-								        break;
-								    case constant.EAST:
 								        state.yposition++;
 								        if(state.yposition > constant.MAX){
 								        	state.yposition--;
 								        }
 								        break;
-								    case constant.WEST:
+								    case constant.SOUTH:
 								        state.yposition--;
 								        if(state.yposition < constant.MIN){
 								        	state.yposition++;
+								        }
+								        break;
+								    case constant.EAST:
+								        state.xposition++;
+								        if(state.xposition > constant.MAX){
+								        	state.xposition--;
+								        }
+								        break;
+								    case constant.WEST:
+								        state.xposition--;
+								        if(state.xposition < constant.MIN){
+								        	state.xposition++;
 								        }
 								        break;
 								    default:
@@ -79,6 +79,7 @@ module.exports = {
 
 	rotatePosition		: function (position){
 								var index = constant.CARDINALDIRECTIONS.indexOf(state.cardinaldirection);
+								//Treat the CARDINALDIRECTIONS array as a circular array 
 								switch(position){
 								    case constant.RIGHT:
 								    	state.cardinaldirection = constant.CARDINALDIRECTIONS[(index + 

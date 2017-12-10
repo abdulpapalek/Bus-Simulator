@@ -91,6 +91,12 @@ describe('placeBus',function(){
 		assert.equal(UtilityMethods.placeBus("PLACE 0,0,SOUTH"), constant.SUCCESS);
 	});
 });
+//success
+describe('placeBus',function(){
+	it('SUCCESS',function(){
+		assert.equal(UtilityMethods.placeBus("PLACE 5,5,NORTH"), constant.SUCCESS);
+	});
+});
 //MOVE
 describe('moveBus',function(){
 	it('undefined',function(){
