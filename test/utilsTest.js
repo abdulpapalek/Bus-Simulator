@@ -37,6 +37,18 @@ describe('checkPlaceValidity', function () {
     assert.equal(UtilityMethods.checkPlaceValidity('PLACE 4,4,NORTH'), true)
   })
 })
+// SOUTH direction
+describe('checkPlaceValidity', function () {
+  it('Valid Command', function () {
+    assert.equal(UtilityMethods.checkPlaceValidity('PLACE -4,-4,SOUTH'), true)
+  })
+})
+// WEST direction
+describe('checkPlaceValidity', function () {
+  it('Valid Command', function () {
+    assert.equal(UtilityMethods.checkPlaceValidity('PLACE -4,5,WEST'), true)
+  })
+})
 // Invalid Command(special Character)
 describe('Invalid Command(special Character)', function () {
   it('Invalid Command(special Character)', function () {
