@@ -1,3 +1,3 @@
-busSimulator = require('./src/bus_simulator');
+const busSimulator = require('./src/bus_simulator')
 
-busSimulator();
+busSimulator()

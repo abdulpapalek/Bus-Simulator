@@ -12,8 +12,6 @@ Valid commands:
   LEFT
   RIGHT
   REPORT
-run 
-node app.js
 
 ```
 ### Prerequisites
@@ -21,14 +19,19 @@ node app.js
 nodejs
 npm
 mocha-chai
+standard
 ```
 ### Installing
 ```
 git clone https://github.com/abdulpapalek/Bus-Simulator.git
 ```
+## Running the application
+```
+npm start
+```
 ## Running the tests
 ```
-npm run test
+npm test
 ```
 ## Contributing
 ```
@@ -42,4 +45,8 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 ```
 * Stack overflow thanks alot!
 * Thank you Accordo for this challenge
+```
+## Notes
+```
+* run 'standard --fix' to fix any inconsistent or coding styles not adhering to best practices
 ```

@@ -1,10 +1,11 @@
 {
   "name": "bus_simulator",
   "version": "1.0.0",
-  "description": "Initial Commit",
+  "description": "Bus carpark simulator",
   "main": "app.js",
   "scripts": {
-    "test": "mocha || true"
+    "start": "node app.js",
+    "test" : "mocha || true"
   },
   "repository": {
     "type": "git",
@@ -16,11 +17,9 @@
     "url": "https://github.com/abdulpapalek/Bus-Simulator/issues"
   },
   "homepage": "https://github.com/abdulpapalek/Bus-Simulator#readme",
-  "dependencies": {
-    "prompt": "^1.0.0"
-  },
   "devDependencies": {
     "chai": "^4.1.2",
-    "mocha": "^4.0.1"
+    "mocha": "^4.0.1",
+    "standard": "^10.0.3"
   }
 }
