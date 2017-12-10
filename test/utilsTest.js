@@ -19,6 +19,18 @@ describe('retrievexy',function(){
 		assert.equal(UtilityMethods.retrievexy("PLACE 5,0,EAST"), "5,0");
 	});
 });
+//WEST
+describe('retrievexy',function(){
+	it('-5,0',function(){
+		assert.equal(UtilityMethods.retrievexy("PLACE -5,0,EAST"), "-5,0");
+	});
+});
+//SOUTH
+describe('retrievexy',function(){
+	it('0,-5',function(){
+		assert.equal(UtilityMethods.retrievexy("PLACE 0,-5,EAST"), "0,-5");
+	});
+});
 //Valid Command
 describe('checkPlaceValidity',function(){
 	it('Valid Command',function(){

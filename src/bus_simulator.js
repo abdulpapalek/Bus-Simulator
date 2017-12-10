@@ -14,16 +14,13 @@ module.exports =  function(){
 			if(valid == constant.FAIL){
 				return;
 			}
-			initialPositionFlag = true;
+			if(initialPositionFlag == false){
+				initialPositionFlag = true;
+			}
 			return;		
 		}
 
 		if(initialPositionFlag == false){			
-			return;
-		}
-		//check for numeric, special characters and lower case characters
-		pos = command.search(constant.CHECKNUMERICSPECIALCHAR);
-		if(pos > constant.NOTFOUND){
 			return;
 		}
 		switch(command) {
