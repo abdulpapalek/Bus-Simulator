@@ -19,7 +19,6 @@ module.exports = function () {
       }
       return
     }
-
     if (initialPositionFlag === false) {
       return
     }
